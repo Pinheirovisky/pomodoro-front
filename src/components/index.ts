@@ -1,3 +1,3 @@
-import { PomodoroTimer } from './PomodoroTimer';
-
+export { Button } from './Button';
 export { PomodoroTimer } from './PomodoroTimer';
+export { Timer } from './Timer';
