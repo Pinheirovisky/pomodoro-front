@@ -7,4 +7,15 @@
 
 body {
   font-family: sans-serif;
+  background-color: #41e1ba;
+  transition: background-color 300ms ease-in-out;
+  line-height: 1.5;
+}
+
+.working {
+  background-color: #ef5d50;
+}
+
+.hidden {
+  display: none;
 }
