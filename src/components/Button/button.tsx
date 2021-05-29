@@ -1,5 +1,8 @@
 import React from 'react';
 
+// styles
+import Wrapper from './button.styles';
+
 interface Props {
   children: string;
   onClick?: () => void;
@@ -8,9 +11,9 @@ interface Props {
 
 const Button: React.FC<Props> = ({ onClick, children, className }: Props) => {
   return (
-    <button onClick={onClick} className={className}>
+    <Wrapper onClick={onClick} className={className}>
       {children}
-    </button>
+    </Wrapper>
   );
 };
 
