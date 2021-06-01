@@ -7,11 +7,17 @@ interface Props {
   children: string;
   onClick?: () => void;
   className?: string;
+  working?: boolean;
 }
 
-const Button: React.FC<Props> = ({ onClick, children, className }: Props) => {
+const Button: React.FC<Props> = ({
+  onClick,
+  children,
+  className,
+  working,
+}: Props) => {
   return (
-    <Wrapper onClick={onClick} className={className}>
+    <Wrapper working={working} onClick={onClick} className={className}>
       {children}
     </Wrapper>
   );
