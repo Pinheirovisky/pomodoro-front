@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useEffect } from 'react';
 import { useInterval } from '../../hooks/use-interval';
 
 // components
@@ -17,6 +16,9 @@ interface Props {
   working: boolean;
   setWorking: (value: boolean) => void;
 }
+
+const audioStartWorking = new Audio('/sounds/bell-start.mp3');
+const audioStopWorking = new Audio('/sounds/bell-finish.mp3');
 
 const PomodoroTimer: React.FC<Props> = ({
   defaultPomodoroTime,
@@ -41,6 +43,20 @@ const PomodoroTimer: React.FC<Props> = ({
     setWorking(true);
     setResting(false);
     setMainTime(defaultPomodoroTime);
+
+    const playPromise = audioStartWorking.play();
+    console.log(playPromise);
+    // playPromise = audio;
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(function () {
+          console.log('Playing');
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
   };
 
   const configureRest = (long: boolean) => {
@@ -53,6 +69,8 @@ const PomodoroTimer: React.FC<Props> = ({
     } else {
       setMainTime(shortRestTime);
     }
+
+    audioStopWorking.play();
   };
 
   return (
