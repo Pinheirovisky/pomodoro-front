@@ -35,4 +35,4 @@ Aplicação frontend da técnica de pomodoro - desenvolvido segundo instruções
  
   ##### Tela - durante um ciclo do Pomodoro
  
- ![pomodoroDurante](https://github.com/Pinheirovisky/pomodoro-front/blob/main/public/docs/pomodoroInicio.PNG)
+ ![pomodoroDurante](https://github.com/Pinheirovisky/pomodoro-front/blob/main/public/docs/pomodoroFim.PNG)
