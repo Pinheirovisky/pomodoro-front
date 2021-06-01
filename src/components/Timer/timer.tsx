@@ -1,5 +1,5 @@
 import React from 'react';
-import { secondsToTime } from '../../utils/seconds-to-time';
+import { secondsToMinutes } from '../../utils/seconds-to-minutes';
 
 // styles
 import Wrapper from './timer.styles';
@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Timer: React.FC<Props> = ({ mainTime }: Props) => {
-  return <Wrapper>{secondsToTime(mainTime)}</Wrapper>;
+  return <Wrapper>{secondsToMinutes(mainTime)}</Wrapper>;
 };
 
 export default Timer;
